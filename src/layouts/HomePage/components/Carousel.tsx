@@ -64,7 +64,6 @@ export const Carousel = () => {
               ))}
             </div>
           </div>
-          {/*}
           <div className="carousel-item">
             <div className="row d-flex justify-content-center align-items-center">
               {cards.slice(3, 6).map((card) => (
@@ -74,39 +73,31 @@ export const Carousel = () => {
           </div>
           <div className="carousel-item">
             <div className="row d-flex justify-content-center align-items-center">
-              <ReturnCard card={cards[7]} key={cards[7].id} />
-            </div>
-          </div>
-              </div>}*/}
-          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
-        {/* Mobile */}
-        <div className="d-lg-none mt-3">
-          <div className="row d-flex justify-content-center align-items-center">
-            <div className="text-center">
-              {<ReturnCard card={cards[0]} key={cards[0].id} />}
-              <h6 className="mt-3">
-                <b>Card</b>
-              </h6>
-              <p>CardSwapr</p>
-              <a className="btn main-color text-white" href="#">
-                Reserve
-              </a>
+              {cards.slice(6, 9).map((card) => (
+                <ReturnCard card={card} key={card.id} />
+              ))}
             </div>
           </div>
         </div>
-        <div className="homepage-carousel-title mt-3">
-          <a className="btn btn-outline-secondary btn-lg" href="#">
-            View More
-          </a>
+        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
+      {/* Mobile */}
+      <div className="d-lg-none mt-3">
+        <div className="row d-flex justify-content-center align-items-center">
+          <div className="text-center">{<ReturnCard card={cards[0]} key={cards[0].id} />}</div>
         </div>
+      </div>
+      <div className="homepage-carousel-title mt-3">
+        <a className="btn btn-outline-secondary btn-lg" href="#">
+          View More
+        </a>
       </div>
     </div>
   );

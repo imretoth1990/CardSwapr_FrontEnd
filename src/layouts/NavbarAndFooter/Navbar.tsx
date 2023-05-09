@@ -2,7 +2,7 @@ export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark main-color py-3">
       <div className="container-fluid">
-        <span className="navbar-brand">CardSwapr</span>
+        <img className="navbar-brand" src="src/Images/PublicImages/logo.png" style={{ height: 60 }}></img>
         <button
           className="navbar-toggler"
           type="button"
@@ -27,6 +27,7 @@ export const Navbar = () => {
               </a>
             </li>
           </ul>
+
           <ul className="navbar-nav ms-auto">
             <li className="nav-item m-1">
               <a type="button" className="btn btn-outline-light" href="#">

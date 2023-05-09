@@ -2,6 +2,7 @@ import { ReturnCard } from "./ReturnCard";
 import { useEffect, useState } from "react";
 import CardModel from "../../../models/CardModel";
 import { fetchCards } from "../services/apiCalls";
+import { LoadingSpinner } from "../../Utils/LoadingSpinner";
 
 export const Carousel = () => {
   const [cards, setCards] = useState<CardModel[]>([]);
@@ -34,11 +35,7 @@ export const Carousel = () => {
   }, []);
 
   if (isLoading) {
-    return (
-      <div className="container m-5">
-        <p>Loading...</p>
-      </div>
-    );
+    return <LoadingSpinner />;
   }
 
   if (httpError) {

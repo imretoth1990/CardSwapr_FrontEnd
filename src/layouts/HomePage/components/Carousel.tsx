@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import CardModel from "../../../models/CardModel";
 import { fetchCards } from "../services/apiCalls";
 import { LoadingSpinner } from "../../Utils/LoadingSpinner";
+import { Link } from "react-router-dom";
 
 export const Carousel = () => {
   const [cards, setCards] = useState<CardModel[]>([]);
@@ -92,9 +93,9 @@ export const Carousel = () => {
         </div>
       </div>
       <div className="homepage-carousel-title mt-3">
-        <a className="btn btn-outline-secondary btn-lg" href="#">
+        <Link className="btn btn-outline-secondary btn-lg" to="/searchCards">
           View More
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 :root {
   --mainOpacity: rgba(0, 0, 0, 0.55);
+  --mainBlue: #0e76a8;
 }
 
 .header {
@@ -19,7 +20,7 @@
 }
 
 .main-color {
-  background-color: #0e76a8;
+  background-color: var(--mainBlue);
 }
 
 .col-image-left {
@@ -55,4 +56,55 @@
 .inactiveLink {
   pointer-events: none;
   cursor: default;
+}
+
+.signUp {
+  margin-right: 15px;
+}
+
+.signUp:hover {
+  color: white;
+  background-color: orange;
+}
+
+.signIn {
+  color: var(--mainBlue);
+  background-color: white;
+}
+
+.signIn:hover {
+  color: white;
+  background-color: orange;
+}
+
+.logoMobile {
+  height: 60px;
+  margin-left: 2%;
+}
+
+.logoDesktop {
+  height: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-nav {
+  width: 180px;
+}
+
+.formTitel {
+  color: var(--mainBlue);
+  text-align: center;
+  padding-bottom: 7%;
+}
+
+.center {
+  margin: auto;
+  max-width: fit-content;
+  padding: 10px;
+}
+
+.makeBlue {
+  color: var(--mainBlue);
 }

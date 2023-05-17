@@ -1,13 +1,7 @@
 import { NavLink } from "react-router-dom";
-
+import { SignButtons } from "./SignButtons";
+import Logo from "../../../Images/PublicImages/logo.png";
 export const DesktopNavbar = () => {
-  let brandStyle = {
-    height: "60px",
-    display: "block",
-    marginLeft: "33%",
-    marginRight: "auto",
-  };
-
   return (
     <div className="container-fluid d-none d-lg-block">
       {/* Desktop */}
@@ -35,14 +29,8 @@ export const DesktopNavbar = () => {
             </NavLink>
           </li>
         </ul>
-        <img className="navbar-brand" src="src/Images/PublicImages/logo.png" style={brandStyle}></img>
-        <ul className="navbar-nav ms-auto">
-          <li className="nav-item m-1">
-            <a type="button" className="btn btn-outline-light" href="#">
-              Sign in
-            </a>
-          </li>
-        </ul>
+        <img className="navbar-brand logoDesktop" src={Logo}></img>
+        <SignButtons />
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Heros = () => {
   return (
     <div>
@@ -14,9 +16,9 @@ export const Heros = () => {
                 offer for a swap, so we can create an awesome library based on your preferences. Sign up and create your own collection, communicate with other
                 players and search for the best rares!
               </p>
-              <a className="btn main-color btn-lg text-white" href="#">
-                Sign up
-              </a>
+              <Link to={"/auth/signup"}>
+                <a className="btn main-color btn-lg text-white">Sign up</a>
+              </Link>
             </div>
           </div>
         </div>
@@ -47,9 +49,9 @@ export const Heros = () => {
                 offer for a swap, so we can create an awesome library based on your preferences. Sign up and create your own collection, communicate with other
                 players and search for the best rares!
               </p>
-              <a className="btn main-color btn-lg text-white" href="#">
-                Sign up
-              </a>
+              <Link to={"/auth/signup"}>
+                <a className="btn main-color btn-lg text-white">Sign up</a>
+              </Link>
             </div>
           </div>
           <div className="m-2">

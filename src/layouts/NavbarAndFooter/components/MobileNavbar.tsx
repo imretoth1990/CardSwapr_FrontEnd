@@ -1,17 +1,11 @@
 import { NavLink } from "react-router-dom";
+import { SignButtons } from "./SignButtons";
 
 export const MobileNavbar = () => {
-  let brandStyle = {
-    height: "60px",
-    display: "block",
-    marginLeft: "45%",
-    marginRight: "auto",
-  };
-
   return (
     <div className="container-fluid d-lg-none mt-3">
       {/* Mobile */}
-      <img className="navbar-brand" src="src/Images/PublicImages/logo.png" style={brandStyle}></img>
+      <img className="navbar-brand logoMobile" src="src/Images/PublicImages/logo.png"></img>
       <button
         className="navbar-toggler"
         type="button"
@@ -36,13 +30,7 @@ export const MobileNavbar = () => {
             </NavLink>
           </li>
         </ul>
-        <ul className="navbar-nav ms-auto">
-          <li className="nav-item m-1">
-            <a type="button" className="btn btn-outline-light" href="#">
-              Sign in
-            </a>
-          </li>
-        </ul>
+        <SignButtons />
       </div>
     </div>
   );

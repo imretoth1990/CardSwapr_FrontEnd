@@ -108,3 +108,8 @@
 .makeBlue {
   color: var(--mainBlue);
 }
+
+.checkBox:checked {
+  background-color: var(--mainBlue);
+  border: none;
+}

@@ -24,7 +24,7 @@ export const SignUp = () => {
                 <div className="row">
                   <div className="col-md-6 mb-4">
                     <div className="form-outline">
-                      <input type="text" id="firstName" className="form-control" />
+                      <input type="text" id="firstName" name="firstName" className="form-control" />
                       <label className="form-label" htmlFor="firstName">
                         First name
                       </label>
@@ -32,7 +32,7 @@ export const SignUp = () => {
                   </div>
                   <div className="col-md-6 mb-4">
                     <div className="form-outline">
-                      <input type="text" id="lastName" className="form-control" />
+                      <input type="text" id="lastName" name="lastName" className="form-control" />
                       <label className="form-label" htmlFor="lastName">
                         Last name
                       </label>
@@ -40,24 +40,33 @@ export const SignUp = () => {
                   </div>
                 </div>
 
+                {/** 
                 <div className="form-outline mb-4">
-                  <input type="email" id="username" className="form-control" />
+                  <input type="email" id="username" name="username" className="form-control" />
                   <label className="form-label" htmlFor="username">
                     Username
                   </label>
                 </div>
+                */}
 
                 <div className="form-outline mb-4">
-                  <input type="email" id="emailAdress" className="form-control" />
-                  <label className="form-label" htmlFor="emailAdress">
+                  <input type="email" id="email" name="email" className="form-control" />
+                  <label className="form-label" htmlFor="email">
                     Email address
                   </label>
                 </div>
 
                 <div className="form-outline mb-4">
-                  <input type="password" id="password" className="form-control" />
+                  <input type="password" id="password" name="password" className="form-control" />
                   <label className="form-label" htmlFor="password">
                     Password
+                  </label>
+                </div>
+
+                <div className="form-check d-flex justify-content-center mb-4">
+                  <input className="form-check-input me-2 checkBox" type="checkbox" value="" id="subscribe" checked />
+                  <label className="form-check-label text-muted" htmlFor="subscribe">
+                    Subscribe to our newsletter
                   </label>
                 </div>
 

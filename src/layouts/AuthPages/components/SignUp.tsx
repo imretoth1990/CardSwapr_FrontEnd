@@ -1,4 +1,26 @@
+import { FormEvent, useState } from "react";
 export const SignUp = () => {
+  const [user, setUser] = useState<{ firstName: String; lastName: String; email: String; password: String; subscription: Boolean }>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    subscription: false,
+  });
+
+  const handleOnChange = (event: any) => {
+    let value = event.target.value;
+    if (event.target.type == "checkbox") {
+      value = event.target.checked;
+    }
+    setUser({ ...user, [event.target.id]: value });
+  };
+
+  const handleOnSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log(user);
+  };
+
   return (
     <div className="px-5 py-1.5 px-md-5 text-center text-lg-start" style={{ backgroundColor: "hsl(0, 0%, 96%)" }}>
       <div className="container">
@@ -20,11 +42,11 @@ export const SignUp = () => {
               <div>
                 <h2 className="formTitel">Sign Up</h2>
               </div>
-              <form>
+              <form className="form" onSubmit={handleOnSubmit}>
                 <div className="row">
                   <div className="col-md-6 mb-4">
                     <div className="form-outline">
-                      <input type="text" id="firstName" name="firstName" className="form-control" />
+                      <input type="text" id="firstName" name="firstName" className="form-control" onChange={handleOnChange} />
                       <label className="form-label" htmlFor="firstName">
                         First name
                       </label>
@@ -32,7 +54,7 @@ export const SignUp = () => {
                   </div>
                   <div className="col-md-6 mb-4">
                     <div className="form-outline">
-                      <input type="text" id="lastName" name="lastName" className="form-control" />
+                      <input type="text" id="lastName" name="lastName" className="form-control" onChange={handleOnChange} />
                       <label className="form-label" htmlFor="lastName">
                         Last name
                       </label>
@@ -50,22 +72,22 @@ export const SignUp = () => {
                 */}
 
                 <div className="form-outline mb-4">
-                  <input type="email" id="email" name="email" className="form-control" />
+                  <input type="email" id="email" name="email" className="form-control" onChange={handleOnChange} />
                   <label className="form-label" htmlFor="email">
                     Email address
                   </label>
                 </div>
 
                 <div className="form-outline mb-4">
-                  <input type="password" id="password" name="password" className="form-control" />
+                  <input type="password" id="password" name="password" className="form-control" onChange={handleOnChange} />
                   <label className="form-label" htmlFor="password">
                     Password
                   </label>
                 </div>
 
                 <div className="form-check d-flex justify-content-center mb-4">
-                  <input className="form-check-input me-2 checkBox" type="checkbox" value="" id="subscribe" checked />
-                  <label className="form-check-label text-muted" htmlFor="subscribe">
+                  <input className="form-check-input me-2 checkBox" type="checkbox" value="" id="subscription" onChange={handleOnChange} />
+                  <label className="form-check-label text-muted" htmlFor="subscription">
                     Subscribe to our newsletter
                   </label>
                 </div>
